@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 export default function HomePage() {
@@ -34,9 +35,9 @@ export default function HomePage() {
       <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5 animate-fade-in-up">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
-            <a className="font-bold text-xl text-aromey-primary" href="/">
+            <Link className="font-bold text-xl text-aromey-primary" href="/">
               a6ch
-            </a>
+            </Link>
             <div className="hidden md:flex space-x-8">
               <a
                 href="#about"
