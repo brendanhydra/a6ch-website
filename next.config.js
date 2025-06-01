@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: process.env.NODE_ENV === 'production' ? '/a6ch-website' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/a6ch-website/' : '',
+  trailingSlash: true,
   images: {
     unoptimized: true,
     domains: [
@@ -7,6 +11,7 @@ const nextConfig = {
       "images.unsplash.com",
       "ext.same-assets.com",
       "ugc.same-assets.com",
+      "yt3.ggpht.com",
     ],
     remotePatterns: [
       {
@@ -27,6 +32,11 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "ugc.same-assets.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "yt3.ggpht.com",
         pathname: "/**",
       },
     ],
